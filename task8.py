@@ -32,7 +32,7 @@ for s in range(10000):
     y2 = y + p2 * math.sin(angle2)
 
 
-    # print("starting coordinates : ", ((int(x1), int(y1))), ((int(x2), int(y2))))
+
 
     #fig, ax = plt.subplots()
     steps = random.randint(10, 100)
@@ -50,7 +50,7 @@ for s in range(10000):
         meetings.append(0)  # stores number of meetings occured in the j_th step
 
         # move all persons by one step
-        # ----------------------------------------------------------------
+
         for i in range(100):
 
             x, y = personA[i]
@@ -81,17 +81,15 @@ for s in range(10000):
                 x = x + dx
                 y = y + dy
             personB[i] = (x, y)
-        # ---------------------------------------------------------------
 
         # check if any person A has meet any person B in this step
-        # --------------------------------------------------------------
+
         for a in range(100):
             for b in range(100):
                 x1, y1 = personA[a]
                 x2, y2 = personB[b]
                 if (x1-x2)**2 + (y1-y2)**2 <= 1:
                     meetings[j] = meetings[j] + 1
-        # ----------------------------------------------------------------
 
 
     avg = 0
@@ -102,11 +100,8 @@ for s in range(10000):
     avg_list.append(avg)
 
 
-# plt.plot(steps_list, avg_list)
 plt.hist(steps_list, weights=avg_list, density=True)
 plt.xlabel("Time")
 plt.ylabel("Average Number of steps")
 plt.show()
-# mpl.show()
 
-# print(avg)
