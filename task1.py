@@ -23,7 +23,7 @@ for x in range(5):
                 steps_ahead1 = np.random.choice(path_A, size=1, p=prob_a)
                 newposition = ans[-1]+steps_ahead1[0]
                 ans.append(newposition)
-                # a.append(abs(newposition))
+            
             dist = abs(ans[-1]-ans[0])
             a.append(dist)
         avg = sum(a)/len(a)
@@ -39,8 +39,8 @@ for x in range(5):
     # plt.xlabel("Steps")
     # plt.ylabel("Distance")
     # plt.show()
+    
 plt.ylabel("Distance")
 plt.xlabel("Probability")
-# plt.show()
 plt.hist(prob, weights=avg_1, density=False)
 plt.show()
