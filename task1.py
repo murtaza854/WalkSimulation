@@ -28,11 +28,7 @@ for x in range(5):
             a.append(dist)
         avg = sum(a)/len(a)
         avg_1.append(avg)
-        # avg = sum(ans) / len(ans)
-        # avg_1.append(avg)
-
-        # plt.plot(avg_1)
-    # print(sum(a) / len(a))
+        
 
     # else:
     #     for i in range(1, steps):
